@@ -2,8 +2,7 @@
 const filterButtons = document.querySelectorAll(".filter-buttons button");
 const productItems = document.querySelectorAll(".product-item");
 
-
-function filterProducts(category) {
+function filterProducts(category,searchQuery="") {
     for(let i=0;i<productItems.length;i++){
         const item=productItems[i];
         const itemCategory=item.getAttribute("data-category");
@@ -29,6 +28,7 @@ for(let i=0;i<filterButtons.length;i++){
         this.classList.add("active");
     });
 }
+
 
 filterProducts("all");
 filterButtons[0].classList.add("active");
